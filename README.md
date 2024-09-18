@@ -1,5 +1,5 @@
+客户端安装
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+wget --no-check-certificate -qO- https://raw.githubusercontent.com/ITlinya/ServerStatus/main/install_client.sh | bash -ex
+
 ```
