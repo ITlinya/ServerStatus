@@ -27,11 +27,11 @@ else
 fi
 
 # 获取最新版本号
-latest_version=$(curl -m 10 -sL "https://proxy.lblog.net/https://api.github.com/repos/zdz/ServerStatus-Rust/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+latest_version=$(curl -m 10 -sL "https://api.github.com/repos/zdz/ServerStatus-Rust/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
 
 # 下载对应架构的文件
 zip_file="client-${OS_ARCH}-unknown-linux-musl.zip"
-wget --no-check-certificate -qO "${zip_file}" "https://proxy.lblog.net/https://github.com/zdz/ServerStatus-Rust/releases/download/${latest_version}/${zip_file}"
+wget --no-check-certificate -qO "${zip_file}" "https://github.com/zdz/ServerStatus-Rust/releases/download/${latest_version}/${zip_file}"
 
 # 解压并安装
 unzip -o "${zip_file}"
