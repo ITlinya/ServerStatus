@@ -10,4 +10,4 @@ sed -i 's|-u h1 -p p1|-u 9527 -p 112233|' /etc/systemd/system/stat_client.servic
 systemctl daemon-reload
 systemctl restart stat_client
 ```
-回调地址示例http://192.168.1.1:8080/report自行修改，账号9527密码112233自行修改
+回调地址示例192.168.1.1:8080/report自行修改，账号9527密码112233自行修改
